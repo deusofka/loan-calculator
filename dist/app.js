@@ -30,8 +30,8 @@ calculate.addEventListener("click", function(e) {
     let computedTotalPayment = p * Math.pow(1 + r / n, n * t);
     let computedTotalInterest = computedTotalPayment - p;
     let computedMonthlyPayment = computedTotalPayment / n / t;
-    monthlyPayment.innerHTML = computedMonthlyPayment;
-    totalPayment.innerHTML = computedTotalPayment;
-    totalInterest.innerHTML = computedTotalInterest;
+    monthlyPayment.innerHTML = computedMonthlyPayment.toFixed(2);
+    totalPayment.innerHTML = computedTotalPayment.toFixed(2);
+    totalInterest.innerHTML = computedTotalInterest.toFixed(2);
   }
 });
