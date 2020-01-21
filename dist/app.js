@@ -1,12 +1,6 @@
 /*********************
   Element Hooks
 **********************/
-
-form = document.querySelector("form");
-containers = document.querySelectorAll("section:nth-of-type(1) .container");
-// Up and down sliders
-up = document.querySelectorAll(".fas.fa-caret-square-up");
-down = document.querySelectorAll(".fas.fa-caret-square-down");
 // Fields
 amount = document.querySelector("#amount");
 interest = document.querySelector("#interest");
@@ -35,38 +29,4 @@ calculate.addEventListener("click", function(e) {
   monthlyPayment.innerHTML = computedMonthlyPayment;
   totalPayment.innerHTML = computedTotalPayment;
   totalInterest.innerHTML = computedTotalInterest;
-});
-
-/*********************
-  Container Event
-**********************/
-containers.forEach(function(container) {
-  container.addEventListener("mouseenter", function(e) {
-    e.target.children[2].style.display = "initial";
-  });
-  container.addEventListener("mouseleave", function(e) {
-    e.target.children[2].style.display = "none";
-  });
-});
-
-/*********************
-  Slider Event
-**********************/
-form.addEventListener("click", function(e) {
-  console.log(e.target);
-  eleClass = e.target.className;
-  if (
-    eleClass === "fas fa-caret-square-up" ||
-    eleClass === "fas fa-caret-square-down"
-  ) {
-    fieldValue = e.target.parentElement.previousElementSibling.value;
-    if (fieldValue === "") {
-      fieldValue = 0;
-    }
-    fieldValue =
-      eleClass === "fas fa-caret-square-up"
-        ? Number(fieldValue) + 1
-        : Number(fieldValue) - 1;
-    e.target.parentElement.previousElementSibling.value = fieldValue;
-  }
 });
