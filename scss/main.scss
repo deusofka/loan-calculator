@@ -42,7 +42,6 @@ body {
       div.container {
         display: grid;
         grid-template-columns: auto 1fr auto;
-        // justify-content: flex-start;
         align-items: center;
         border: $light-color-sc 1px solid;
         margin-bottom: 0.5rem;
