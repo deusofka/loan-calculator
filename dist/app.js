@@ -27,7 +27,7 @@ calculate.addEventListener("click", function(e) {
   let r = Number(interest.value) / 100;
   if (t != 0) {
     console.log(`p: ${p}, t: ${t}, r: ${r}`);
-    let computedTotalPayment = 5000 * Math.pow(1 + r / n, n * t);
+    let computedTotalPayment = p * Math.pow(1 + r / n, n * t);
     let computedTotalInterest = computedTotalPayment - p;
     let computedMonthlyPayment = computedTotalPayment / n / t;
     monthlyPayment.innerHTML = computedMonthlyPayment;
