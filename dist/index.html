@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loan Calculator</title>
+    <script
+      src="https://kit.fontawesome.com/03de6fac72.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Loan Calculator</h2>
+        <form action="">
+          <div class="container">
+            <!-- Child 1 -->
+            <div>
+              <p>$</p>
+            </div>
+            <!-- Child 2 -->
+            <input id="amount" type="text" placeholder="Loan Amount" />
+            <!-- Child 3 -->
+            <div class="slider">
+              <i class="fas fa-caret-square-up"></i>
+              <i class="fas fa-caret-square-down"></i>
+            </div>
+          </div>
+          <div class="container">
+            <div>
+              <p>%</p>
+            </div>
+            <input id="interest" type="text" placeholder="Interest" />
+            <div class="slider">
+              <i class="fas fa-caret-square-up"></i>
+              <i class="fas fa-caret-square-down"></i>
+            </div>
+          </div>
+          <div class="container">
+            <div>
+              <p>#</p>
+            </div>
+            <input id="years" type="text" placeholder="Years To Repay" />
+            <div class="slider">
+              <i class="fas fa-caret-square-up"></i>
+              <i class="fas fa-caret-square-down"></i>
+            </div>
+          </div>
+          <button>Calculate</button>
+        </form>
+      </section>
+      <section>
+        <h2>Results</h2>
+        <div class="container">
+          <div>
+            <p>Monthly Payment</p>
+          </div>
+          <p id="monthly-payment" class="number">8978.71</p id="monthly-payment">
+        </div>
+        <div class="container">
+          <div>
+            <p>Total Payment</p>
+          </div>
+          <p id="total-payment" class="number">107744.54</p>
+        </div>
+        <div class="container">
+          <div>
+            <p>Total Interest</p>
+          </div>
+          <p id="total-interest" class="number">7744.54</p>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
